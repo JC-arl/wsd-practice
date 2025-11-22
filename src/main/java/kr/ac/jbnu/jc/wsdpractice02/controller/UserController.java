@@ -142,9 +142,8 @@ public class UserController {
                     .body(ApiResponse.error("사용자를 찾을 수 없습니다."));
         }
 
-        return ResponseEntity
-                .status(HttpStatus.NO_CONTENT) //204 No Content
-                .body(ApiResponse.success(null, "비밀번호 변경 성공"));
+        return ResponseEntity   //200 OK
+                .ok(ApiResponse.success(null, "비밀번호 변경 성공"));
     }
 
     // DELETE 1: 특정 사용자 삭제
@@ -157,9 +156,8 @@ public class UserController {
                     .body(ApiResponse.error("삭제할 사용자를 찾을 수 없습니다."));
         }
 
-        return ResponseEntity
-                .status(HttpStatus.NO_CONTENT) //204 No Content
-                .body(ApiResponse.success(null, "사용자 삭제 성공"));
+        return ResponseEntity //200 OK
+                .ok(ApiResponse.success(null, "사용자 삭제 성공"));
     }
 
     // DELETE 2: 전체 사용자 삭제

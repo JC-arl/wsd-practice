@@ -32,14 +32,20 @@ src/main/java/kr/ac/jbnu/jc/wsdpractice02
 
 - GET	
   - /api/users	모든 사용자 조회
-  - /api/users/{id}	특정 사용자 조회 (+ 503 시뮬레이션)
-- POST	/api/users	사용자 생성
+  - /api/users/{id}	특정 사용자 조회
+- POST	
+  - /api/users	사용자 생성
   - /api/login	로그인
-- PUT	/api/users/{id}	사용자 이름 수정
+- PUT	
+  - /api/users/{id}	사용자 이름 수정
   - /api/users/{id}/password	사용자 비밀번호 변경
-- DELETE	/api/users/{id}	특정 사용자 삭제
-  - /api/users	전체 사용자 삭제 (+ 500 시뮬레이션)
-
+- DELETE	
+  - /api/users/{id}	특정 사용자 삭제
+  - /api/users	전체 사용자 삭제 
+- 추가 status
+  - 에러 시뮬레이션 → 503 Service Unavailable
+  - /api/users/1?simulateError=true
+  - /api/users?simulateError=true
 ### 응답 포맷 표준화 (ApiResponse)
 - 모든 컨트롤러는 아래 구조를 기반으로 응답을 반환
 ```
