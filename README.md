@@ -42,7 +42,7 @@ src/main/java/kr/ac/jbnu/jc/wsdpractice02
 - DELETE	
   - /api/users/{id}	특정 사용자 삭제
   - /api/users	전체 사용자 삭제 
-- 추가 status
+- 5xx 에러
   - 에러 시뮬레이션 → 503 Service Unavailable
   - /api/users/1?simulateError=true
   - /api/users?simulateError=true
